@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   const skills = [
-    { name: 'Frontend Development', level: 95, color: 'bg-primary' },
-    { name: 'Backend Development', level: 90, color: 'bg-secondary' },
+    { name: 'FullStack Development', level: 95, color: 'bg-primary' },
+    { name: 'Frontend Development', level: 90, color: 'bg-secondary' },
     { name: 'UX/UI Design', level: 88, color: 'bg-accent' },
-    { name: 'Mobile Development', level: 85, color: 'bg-primary' },
+    { name: 'Backend Development', level: 85, color: 'bg-primary' },
     { name: 'DevOps', level: 80, color: 'bg-secondary' },
     { name: 'Database Design', level: 92, color: 'bg-accent' },
   ];
@@ -35,12 +35,7 @@ const About = () => {
     },
   ];
 
-  const achievements = [
-    { icon: Award, title: 'Best Developer Award 2023', org: 'Tech Excellence Awards' },
-    { icon: Code, title: 'Certified React Expert', org: 'React Academy' },
-    { icon: Palette, title: 'UX Design Certification', org: 'Design Institute' },
-    { icon: Users, title: 'Team Leadership Certification', org: 'Management Academy' },
-  ];
+
 
   return (
     <div className="min-h-screen py-20">
@@ -134,37 +129,6 @@ const About = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Achievements Section */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Achievements</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Recognition and certifications that validate my expertise and commitment to excellence.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {achievements.map((achievement, index) => (
-              <div 
-                key={index}
-                className="flex items-center space-x-4 p-6 bg-card border border-border rounded-lg hover-scale cyber-border"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <achievement.icon className="h-6 w-6 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">{achievement.title}</h3>
-                  <p className="text-muted-foreground text-sm">{achievement.org}</p>
-                </div>
               </div>
             ))}
           </div>

@@ -7,7 +7,7 @@ const Footer = () => {
   const socialLinks = [
     { 
       icon: Github, 
-      href: '#', 
+      href: 'https://github.com/kirubel-coder', 
       label: 'GitHub',
       hoverColor: 'hover:text-primary-glow' 
     },
@@ -19,7 +19,7 @@ const Footer = () => {
     },
     { 
       icon: Mail, 
-      href: 'mailto:kirubel@example.com', 
+      href: 'mailto:kirubeladdis364@gmail.com', 
       label: 'Email',
       hoverColor: 'hover:text-accent-glow' 
     },
@@ -92,13 +92,13 @@ const Footer = () => {
                 href="mailto:kirubel@example.com"
                 className="block text-primary hover:text-primary-glow transition-colors duration-300"
               >
-                kirubel@example.com
+                kirubeladdis364@gmail.com
               </a>
               <a 
-                href="tel:+1234567890"
+                href="tel:+25199424291"
                 className="block text-primary hover:text-primary-glow transition-colors duration-300"
               >
-                +1 (234) 567-8900
+                +251997424291
               </a>
             </div>
           </div>
@@ -108,9 +108,6 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Kirubel Addis. All rights reserved.
-          </p>
-          <p className="text-sm text-muted-foreground flex items-center">
-            Built with <Heart className="h-4 w-4 mx-1 text-primary animate-glow-pulse" /> and cutting-edge tech
           </p>
         </div>
       </div>

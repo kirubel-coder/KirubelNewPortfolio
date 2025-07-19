@@ -3,6 +3,10 @@ import { ArrowRight, Download, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import heroBackground from '@/assets/hero-bg.jpg';
+import kLogo from '@/assets/upworkPfpCropped2.jpg';
+import MovieRatingPic1 from '@/assets/movierating1.png';
+import Closet1 from '@/assets/closet1.png';
+import Danat1 from '@/assets/danat1.png';
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -22,7 +26,7 @@ const Home = () => {
   }, [typedText, isTyping, fullText]);
 
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
+    { number: '15+', label: 'Projects Completed' },
     { number: '3+', label: 'Years Experience' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' },
@@ -30,22 +34,22 @@ const Home = () => {
 
   const recentProjects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Modern React-based shopping experience',
+      title: 'Movie Rating Website For Amharic Movies',
+      description: 'Modern React-based platform for movie enthusiasts',
       tech: ['React', 'Node.js', 'MongoDB'],
-      image: '/api/placeholder/400/250'
+      image: MovieRatingPic1
     },
     {
-      title: 'Mobile Banking App',
-      description: 'Secure financial management solution',
-      tech: ['React Native', 'Express', 'PostgreSQL'],
-      image: '/api/placeholder/400/250'
+      title: 'Shopping WebApp | website',
+      description: 'A shopping web application with product management',
+      tech: ['React ', 'MongoDB', 'TypeScript'],
+      image: Closet1
     },
     {
-      title: 'SaaS Dashboard',
-      description: 'Analytics and reporting platform',
-      tech: ['Vue.js', 'Python', 'Redis'],
-      image: '/api/placeholder/400/250'
+      title: 'Company Landing Page',
+      description: 'A landing page for a company called Danat PLC',
+      tech: ['React.js', 'Tailwind CSS', 'TypeScript'],
+      image: Danat1
     },
   ];
 
@@ -80,13 +84,29 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <div className="space-y-6 animate-fade-in-up">
+        {/* Hero Flex Layout */}
+        <svg width="0" height="0" style={{ position: 'absolute' }}>
+          <clipPath id="hero-blob" clipPathUnits="objectBoundingBox">
+            <path d="M0.77,0.13 C0.89,0.7,0.98,0.68,0.73,0.86 C0.68,0.44,0.69,0.99,0.5,1 C0.31,1,0.13,0.85,0.06,0.67 C-0.01,0.79,0.01,0.28,0.13,0.14 C0.25,0,0.65,-0.01,0.77,0.13 Z" />
+          </clipPath>
+        </svg>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-10 animate-fade-in-up">
+          {/* Hero Image with blob mask */}
+          <div className="w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 overflow-hidden shadow-lg mb-6 lg:mb-0">
+            <img 
+              src={kLogo} 
+              alt="Kirubel Addis" 
+              className="w-full h-full object-cover"
+              style={{ clipPath: 'url(#hero-blob)' }}
+            />
+          </div>
+
+          {/* Hero Content */}
+          <div className="text-center lg:text-left max-w-2xl w-full">
             {/* Greeting */}
-            <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm text-muted-foreground mb-2">
               <Sparkles className="h-4 w-4 text-primary" />
-              <span>Welcome to my digital universe</span>
+              <span></span>
               <Sparkles className="h-4 w-4 text-primary" />
             </div>
 
@@ -106,13 +126,13 @@ const Home = () => {
             </div>
 
             {/* Description */}
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed mt-4">
               I craft exceptional digital experiences through innovative web development, 
               intuitive UX/UI design, and cutting-edge technology solutions.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
               <Button 
                 asChild 
                 size="lg" 
@@ -123,18 +143,18 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              
-              <Button 
+
+                <Button 
                 asChild 
-                variant="outline" 
                 size="lg" 
-                className="cyber-border hover-glow-secondary group"
+                className="text-primary cyber-border hover-glow-primary group bg-transparent "
               >
-                <a href="#" download>
-                  <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Download CV
-                </a>
+                <Link to="/contact">
+                  Contact me
+                </Link>
               </Button>
+              
+           
             </div>
           </div>
         </div>
@@ -186,8 +206,12 @@ const Home = () => {
                 key={index}
                 className="group bg-card border border-border rounded-lg overflow-hidden hover-scale cyber-border"
               >
-                <div className="aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-muted-foreground">Project Image</div>
+                <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title + ' preview'} 
+                    className="w-full h-full object-cover" 
+                  />
                 </div>
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">{project.title}</h3>

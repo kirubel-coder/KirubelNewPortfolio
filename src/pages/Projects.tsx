@@ -1,55 +1,47 @@
 import { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import MovieRatingPic1 from '@/assets/movierating1.png';
+import Closet1 from '@/assets/closet1.png';
+import Danat1 from '@/assets/danat1.png';
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Web Development', 'Mobile Apps', 'UI/UX Design', 'Full-Stack'];
 
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A modern, responsive e-commerce platform built with React and Node.js featuring advanced search, payment integration, and admin dashboard.',
-      category: 'Web Development',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'Movie Rating Website for Amharic movies',
+      description: 'One of my standout projects is this movie rating web application, designed specifically for Amharic movies. It features a modern, responsive design with a user-friendly interface that allows users to rate and review movies easily.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      image: MovieRatingPic1,
       featured: true
     },
     {
       id: 2,
-      title: 'Task Management Mobile App',
-      description: 'Cross-platform mobile application for team collaboration and task management with real-time updates and push notifications.',
+      title: 'Shopping WebApp | website',
+      description: 'Another key project in my portfolio is a shopping web application focused on selling clothing items. The goal of this project was to create a seamless and user-friendly online shopping experience.',
       category: 'Mobile Apps',
-      technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['React', 'Node.js', 'Redux', 'MongoDB'],
+      image: Closet1,
       featured: true
     },
     {
       id: 3,
-      title: 'SaaS Analytics Dashboard',
-      description: 'Comprehensive analytics dashboard for SaaS businesses with real-time metrics, data visualization, and custom reporting.',
+      title: 'Landing page Website ',
+      description: 'The purpose of this project for Danat PLC was to create a visually appealing and highly functional web presence that effectively represents the company’s brand and services. The landing page is designed with a clean and modern layout, ensuring a seamless user experience.',
       category: 'Full-Stack',
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'D3.js', 'Docker'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['React.js', 'Tailwind', 'TypeScript',],
+      image: Danat1,
       featured: false
     },
     {
       id: 4,
-      title: 'Healthcare App Design',
+      title: 'Healthcare Website Design',
       description: 'Complete UX/UI design for a healthcare application focusing on patient management and telemedicine capabilities.',
       category: 'UI/UX Design',
-      technologies: ['Figma', 'Adobe XD', 'Principle', 'InVision'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['Figma', 'Adobe PS', 'Canva', ],
+      image: "https://cdn.dribbble.com/userupload/21467436/file/original-e070670b034bb599eeb8fc98085e2b65.jpg?resize=1024x768&vertical=center",
       featured: false
     },
     {
@@ -57,30 +49,22 @@ const Projects = () => {
       title: 'Real Estate Platform',
       description: 'Full-featured real estate platform with property listings, virtual tours, mortgage calculator, and agent management system.',
       category: 'Web Development',
-      technologies: ['Next.js', 'Express.js', 'MySQL', 'AWS S3', 'Google Maps API'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      technologies: ['Next.js', 'Express.js', 'Postgresql',  'Google Maps API'],
+      image: "https://cdn.dribbble.com/userupload/16607783/file/original-84341079177105105983fb8b0b3db7e9.png?resize=1024x768&vertical=center",
       featured: true
     },
     {
       id: 6,
-      title: 'Fitness Tracking App',
-      description: 'Mobile fitness application with workout tracking, nutrition planning, and social features for fitness enthusiasts.',
-      category: 'Mobile Apps',
-      technologies: ['Flutter', 'Firebase', 'ML Kit', 'HealthKit'],
-      image: '/api/placeholder/600/400',
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'Fitness Tracking Website',
+      description: 'fitness website with workout tracking, nutrition planning, and social features for fitness enthusiasts.',
+      category: 'Website',
+      technologies: ['Next.js', 'Express.js', 'mongodb', 'TypeScript'],
+      image: "https://cdn.dribbble.com/userupload/18181117/file/original-6e7cb3ce00e491f05cf8ce3f64d2111d.png?resize=1024x666&vertical=center",
       featured: false
     }
   ];
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
 
-  const featuredProjects = projects.filter(project => project.featured);
 
   return (
     <div className="min-h-screen py-20">
@@ -96,104 +80,28 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Featured <span className="gradient-text">Work</span>
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {featuredProjects.slice(0, 2).map((project) => (
-              <div 
-                key={project.id}
-                className="group bg-card border border-border rounded-lg overflow-hidden hover-scale cyber-border"
-              >
-                <div className="aspect-video bg-muted relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                    Project Preview
-                  </div>
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold">{project.title}</h3>
-                    <div className="flex space-x-2">
-                      <Button size="sm" variant="outline" className="hover-glow-primary">
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                      <Button size="sm" variant="outline" className="hover-glow-secondary">
-                        <Github className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span 
-                        key={tech}
-                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-md border border-primary/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* Filter Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <div className="flex items-center space-x-2 text-muted-foreground mb-4">
-            <Filter className="h-5 w-5" />
-            <span>Filter by category:</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(category)}
-                className={`cyber-border ${
-                  selectedCategory === category 
-                    ? 'hover-glow-primary' 
-                    : 'hover-glow-secondary'
-                }`}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-        </div>
+
+
 
         {/* All Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div 
               key={project.id}
-              className="group bg-card border border-border rounded-lg overflow-hidden hover-scale cyber-border"
+              className="group bg-card border border-border rounded-lg overflow-hidden  cyber-border"
             >
               <div className="aspect-video bg-muted relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                  Project Image
-                </div>
-                
+                <img
+                  src={project.image}
+                  alt={project.title + ' preview'}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{ zIndex: 1 }}
+                />
                 {/* Overlay with actions */}
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Button size="sm" className="hover-glow-primary">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="hover-glow-secondary">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </Button>
-                </div>
+
               </div>
-              
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -203,11 +111,9 @@ const Projects = () => {
                     </span>
                   )}
                 </div>
-                
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                
                 <div className="flex flex-wrap gap-1">
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span 
@@ -230,9 +136,7 @@ const Projects = () => {
 
         {/* Load More / CTA */}
         <div className="text-center">
-          <Button variant="outline" size="lg" className="cyber-border hover-glow-primary mb-8">
-            Load More Projects
-          </Button>
+        
           
           <div className="bg-gradient-hero p-8 rounded-lg border border-border">
             <h2 className="text-2xl font-bold mb-4">

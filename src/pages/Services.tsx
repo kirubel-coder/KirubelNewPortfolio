@@ -8,8 +8,8 @@ const Services = () => {
       icon: Code,
       title: 'Frontend Development',
       description: 'Building responsive, interactive, and performant user interfaces using modern frameworks like React, Vue.js, and Angular.',
-      features: ['React & Vue.js', 'TypeScript', 'Responsive Design', 'Performance Optimization'],
-      price: 'Starting at $2,500',
+      features: ['React & Next.js', 'TypeScript', 'Responsive Design', 'Performance Optimization'],
+      price: 'Starting at $200 / 25k ETB',
       color: 'primary'
     },
     {
@@ -17,7 +17,7 @@ const Services = () => {
       title: 'Backend Development',
       description: 'Creating robust server-side applications, APIs, and database architectures that scale with your business needs.',
       features: ['Node.js & Express', 'RESTful APIs', 'Database Design', 'Authentication & Security'],
-      price: 'Starting at $3,000',
+      price: 'Starting at $250 / 30k ETB',
       color: 'secondary'
     },
     {
@@ -25,32 +25,24 @@ const Services = () => {
       title: 'UX/UI Design',
       description: 'Designing intuitive and visually appealing interfaces that provide exceptional user experiences across all devices.',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-      price: 'Starting at $2,000',
+      price: 'Starting at $150 / 20k ETB',
       color: 'accent'
     },
     {
       icon: Smartphone,
-      title: 'Mobile Development',
+      title: 'FullStack Development',
       description: 'Developing cross-platform mobile applications that deliver native performance and user experience.',
       features: ['React Native', 'iOS & Android', 'App Store Deployment', 'Push Notifications'],
-      price: 'Starting at $4,000',
+      price: 'Starting at $320 / 40k ETB',
       color: 'primary'
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',
+      title: 'Deployment Services',
       description: 'Implementing scalable cloud infrastructure and deployment strategies for modern web applications.',
       features: ['AWS & Azure', 'CI/CD Pipelines', 'Docker & Kubernetes', 'Monitoring & Logging'],
-      price: 'Starting at $3,500',
+      price: 'Starting at $80 / 12k ETB',
       color: 'secondary'
-    },
-    {
-      icon: Zap,
-      title: 'Full-Stack Solutions',
-      description: 'End-to-end development services covering everything from concept to deployment and maintenance.',
-      features: ['Complete Web Apps', 'E-commerce Platforms', 'SaaS Applications', 'Technical Consulting'],
-      price: 'Custom Pricing',
-      color: 'accent'
     },
   ];
 
@@ -150,9 +142,7 @@ const Services = () => {
                   <div className="text-lg font-semibold text-primary mb-4">
                     {service.price}
                   </div>
-                  <Button className="w-full cyber-border hover-glow-primary">
-                    Get Started
-                  </Button>
+                  
                 </div>
               </div>
             </div>

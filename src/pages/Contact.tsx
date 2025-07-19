@@ -19,19 +19,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'kirubel@example.com',
+      details: 'kirubeladdis364@gmail.com',
       description: 'Send me an email anytime!'
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (234) 567-8900',
+      details: '+251997424291',
       description: 'Call me for urgent inquiries'
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'San Francisco, CA',
+      details: 'Addis Ababa, Ethiopia',
       description: 'Available for remote work worldwide'
     },
     {
@@ -44,7 +44,6 @@ const Contact = () => {
 
   const services = [
     'Web Development',
-    'Mobile Development',
     'UI/UX Design',
     'Backend Development',
     'Cloud Solutions',
@@ -173,7 +172,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="John Doe"
+                      placeholder="Abebe Kebede"
                       className="bg-background border-border focus:border-primary"
                     />
                   </div>
@@ -188,7 +187,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="john@example.com"
+                      placeholder="AbebeKebede@example.com"
                       className="bg-background border-border focus:border-primary"
                     />
                   </div>
@@ -271,7 +270,7 @@ const Contact = () => {
             {[
               {
                 question: "What's your typical project timeline?",
-                answer: "Project timelines vary based on complexity, but most web projects take 2-6 weeks, while mobile apps typically require 8-12 weeks."
+                answer: "Project timelines vary based on complexity, but most web projects take 2-6 weeks."
               },
               {
                 question: "Do you offer ongoing support?",
