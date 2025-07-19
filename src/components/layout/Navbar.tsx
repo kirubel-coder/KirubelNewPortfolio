@@ -75,11 +75,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            size="icon"
-            className="md:hidden"
+            className="md:hidden w-14 h-14 flex items-center justify-center p-0"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-10 w-10" />}
           </Button>
         </div>
 

@@ -40,25 +40,25 @@ const Projects = () => {
       title: 'Healthcare Website Design',
       description: 'Complete UX/UI design for a healthcare application focusing on patient management and telemedicine capabilities.',
       category: 'UI/UX Design',
-      technologies: ['Figma', 'Adobe PS', 'Canva', ],
+      technologies: ['Figma', 'Codepen', 'Canva', ],
       image: "https://cdn.dribbble.com/userupload/21467436/file/original-e070670b034bb599eeb8fc98085e2b65.jpg?resize=1024x768&vertical=center",
       featured: false
     },
     {
       id: 5,
-      title: 'Real Estate Platform',
+      title: 'Real Estate Platform Website Design',
       description: 'Full-featured real estate platform with property listings, virtual tours, mortgage calculator, and agent management system.',
-      category: 'Web Development',
-      technologies: ['Next.js', 'Express.js', 'Postgresql',  'Google Maps API'],
+      category: 'Web Design',
+      technologies: ['Figma', 'Canva', 'Uivers',  'Codepen'],
       image: "https://cdn.dribbble.com/userupload/16607783/file/original-84341079177105105983fb8b0b3db7e9.png?resize=1024x768&vertical=center",
       featured: true
     },
     {
       id: 6,
-      title: 'Fitness Tracking Website',
+      title: 'Fitness Tracking Website Design',
       description: 'fitness website with workout tracking, nutrition planning, and social features for fitness enthusiasts.',
-      category: 'Website',
-      technologies: ['Next.js', 'Express.js', 'mongodb', 'TypeScript'],
+      category: 'Website Design',
+      technologies: ['Figma', 'Canva'],
       image: "https://cdn.dribbble.com/userupload/18181117/file/original-6e7cb3ce00e491f05cf8ce3f64d2111d.png?resize=1024x666&vertical=center",
       featured: false
     }

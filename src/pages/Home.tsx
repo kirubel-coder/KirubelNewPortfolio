@@ -92,7 +92,7 @@ const Home = () => {
         </svg>
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-10 animate-fade-in-up">
           {/* Hero Image with blob mask */}
-          <div className="w-72 h-72 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 overflow-hidden shadow-lg mb-6 lg:mb-0">
+          <div className="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 overflow-hidden shadow-lg mb-6 lg:mb-0">
             <img 
               src={kLogo} 
               alt="Kirubel Addis" 
