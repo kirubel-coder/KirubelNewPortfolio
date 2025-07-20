@@ -90,9 +90,9 @@ const Home = () => {
             <path d="M0.77,0.13 C0.89,0.7,0.98,0.68,0.73,0.86 C0.68,0.44,0.69,0.99,0.5,1 C0.31,1,0.13,0.85,0.06,0.67 C-0.01,0.79,0.01,0.28,0.13,0.14 C0.25,0,0.65,-0.01,0.77,0.13 Z" />
           </clipPath>
         </svg>
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-10 animate-fade-in-up">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-10 animate-fade-in-up">
           {/* Hero Image with blob mask */}
-          <div className="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 overflow-hidden shadow-lg mb-6 lg:mb-0">
+          <div className="w-80 h-80 md:w-64 md:h-64 lg:w-80 lg:h-80 flex-shrink-0 overflow-hidden shadow-lg mb-6 lg:mb-0 mx-auto lg:mx-0">
             <img 
               src={kLogo} 
               alt="Kirubel Addis" 

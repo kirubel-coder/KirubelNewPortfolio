@@ -75,22 +75,23 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            className="md:hidden w-14 h-14 flex items-center justify-center p-0"
+            className="md:hidden flex items-center justify-center p-0"
+            style={{ width: '4rem', height: '4rem' }}
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-10 w-10" />}
+            {isOpen ? <X className="h-8 w-8 flex-none" /> : <Menu className="h-12 w-12 flex-none" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-card-custom animate-slide-in-left">
-            <div className="px-4 py-4 space-y-4">
+            <div className="px-6 py-8 space-y-6">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block px-3 py-2 text-base font-medium transition-colors ${
+                  className={`block px-3 py-3 text-lg font-semibold transition-colors ${
                     isActive(item.path)
                       ? 'text-primary'
                       : 'text-muted-foreground hover:text-foreground'
@@ -100,7 +101,7 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="w-full cyber-border">
+              <Button asChild className="w-full cyber-border text-lg py-3">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Get In Touch
                 </Link>
